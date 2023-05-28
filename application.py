@@ -36,8 +36,8 @@ def bot_reply():
     )
     answer = response["choices"][0]["message"]["content"]
     session['chat_history'].append({"role": "assistant", "content": answer})
-    for s in session['chat_history']:
-        print(s['role'] + ": " + s['content'])                    
+    #for s in session['chat_history']:
+    #    print(s['role'] + ": " + s['content'])                    
     return jsonify({'reply': answer})
 
 if __name__ == '__main__':
