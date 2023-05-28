@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex: 1; 
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 70%; 
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+}
+
+.user {
+    color: blue;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.service {
+    color: red;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.bot {
+    color: green;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #f3f3f3;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

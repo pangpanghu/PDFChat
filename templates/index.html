@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="input-container">
+            <!-- Deleted the 'initiate-section' div here -->
+            <div class="input-section">
+                <textarea id="user-input" placeholder="用户提问输入框"></textarea>
+                <button id="user-send-to-bot">发送给GPT</button> <!-- 新的按钮 -->
+            </div>
+        </div>
+        <div class="messages-container">
+            <div id="messages"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
+
